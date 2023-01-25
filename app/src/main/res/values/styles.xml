@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AndroidImageSlider_Indicator">
+    <item name="android:paddingLeft">2dp</item>
+    <item name="android:paddingRight">2dp</item>
+    <item name="shape">oval</item>
+    <item name="padding_left">3dp</item>
+    <item name="padding_right">3dp</item>
+    <item name="padding_top">4dp</item>
+    <item name="padding_bottom">4dp</item>
+    <item name="selected_width">5dp</item>
+    <item name="selected_height">5dp</item>
+    <item name="unselected_width">5dp</item>
+    <item name="unselected_height">5dp</item>
+    <item name="selected_color">@color/colorTextWhite</item>
+    <item name="unselected_color">@color/alarm_title_active</item>
+    </style>
+
+    <color name="darkTextColor">#020000</color>
+    <color name="colorTextWhite">#ffffff</color>
+    <color name="primaryTextColor1">#11CFC5</color>
+    <color name="alarm_title_active">#444444</color>
+
+
+</resources>
