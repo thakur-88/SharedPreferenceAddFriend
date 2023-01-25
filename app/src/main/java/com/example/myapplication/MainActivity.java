@@ -1,23 +1,16 @@
 package com.example.myapplication;
 
-import static com.example.myapplication.Signup.SHARED_PREFS;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString("friends", null);
@@ -71,18 +63,15 @@ public class MainActivity extends AppCompatActivity {
         if (frientListList == null) {
             frientListList = new ArrayList<>();
         }
-
         frientAdapter=new FrientAdapter(frientListList,this);
         GridLayoutManager layoutManager=new GridLayoutManager(this,3);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(frientAdapter);
     }
-
     public void add(View view) {
         Intent intent=new Intent(MainActivity.this,AddFriend.class);
         startActivity(intent);
     }
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();

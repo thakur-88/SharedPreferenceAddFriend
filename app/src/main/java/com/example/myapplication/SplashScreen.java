@@ -36,12 +36,8 @@ public class SplashScreen extends AppCompatActivity {
         sliderLayout = findViewById(R.id.sliderLayout);
         pagerIndicator = findViewById(R.id.custom_indicator);
         getBannerscreen();
-
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-
         fname = sharedpreferences.getString("fname_key", null);
-
-
     }
 
     @Override
@@ -70,7 +66,6 @@ public class SplashScreen extends AppCompatActivity {
     private void showOnLineDataBanner(List<Banner> bannerList) {
         for (int i = 0; i < bannerList.size(); i++) {
             TextSliderView sliderView = new TextSliderView(SplashScreen.this);
-
             final int finalI = i;
             sliderView.image(bannerList.get(i).getImageurl()).setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
                 @Override
@@ -81,7 +76,6 @@ public class SplashScreen extends AppCompatActivity {
 
             sliderLayout.addSlider(sliderView);
         }
-
         sliderLayout.setPresetTransformer(SliderLayout.Transformer.Default);
         sliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         sliderLayout.setPresetTransformer("test");

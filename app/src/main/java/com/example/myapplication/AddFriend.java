@@ -42,7 +42,6 @@ public class AddFriend extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (TextUtils.isEmpty(courseNameEdt.getText().toString()) && TextUtils.isEmpty(courseDescEdt.getText().toString())) {
-                    // this method will call when email and password fields are empty.
                     Toast.makeText(AddFriend.this, "Please Enter First and Last Name", Toast.LENGTH_SHORT).show();
                 } else {
                     courseModalArrayList.add(new FrientList(courseNameEdt.getText().toString(), courseDescEdt.getText().toString(),R.drawable.girl));
